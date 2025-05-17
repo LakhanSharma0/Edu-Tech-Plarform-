@@ -3,10 +3,11 @@ import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
 
 // Images
-import Logo from "../../assets/Logo/Logo-Full-Light.png";
+import logo from "../../assets/Logo/Logo-Small-Light.png"
 
 // Icons
 import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
+import { SlSocialInstagram } from "react-icons/sl";
 
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 const Resources = [
@@ -30,12 +31,16 @@ const Footer = () => {
           {/* Section 1 */}
           <div className="lg:w-[50%] flex flex-wrap flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
             <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
-              <img src={Logo} alt="" className="object-contain" />
+              <Link to="/" className="flex flex-row gap-1 items-center">
+                  <img src={logo} alt="Logo" width={40} height={12} loading="lazy" />
+                  <p className="text-2xl mt-1 font-bold text-richblack-5">
+                    StudyBuddy</p>
+              </Link>              
               <h1 className="text-richblack-50 font-semibold text-[16px]">
                 Company
               </h1>
               <div className="flex flex-col gap-2">
-                {["About", "Careers", "Affiliates"].map((ele, i) => {
+                {["About", "Careers", "Affiliations"].map((ele, i) => {
                   return (
                     <div
                       key={i}
@@ -50,6 +55,7 @@ const Footer = () => {
                 <FaFacebook />
                 <FaGoogle />
                 <FaTwitter />
+                <SlSocialInstagram/>
                 <FaYoutube />
               </div>
               <div></div>
@@ -172,7 +178,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ CodeHelp © 2023 Studynotion</div>
+          <div className="text-center">Made with ❤️ CodeWithMe © 2025 StudyBuddy</div>
         </div>
       </div>
     </div>
