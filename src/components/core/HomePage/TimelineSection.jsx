@@ -14,18 +14,18 @@ const timeline = [
     },
     {
         Logo: Logo2,
-        heading: "Leadership",
-        Description:"Fully committed to the success company",
+        heading: "Scholarity",
+        Description:"It focuses on acquiring and presenting knowledge in an objective.",
     },
     {
         Logo: Logo3,
-        heading: "Leadership",
-        Description:"Fully committed to the success company",
+        heading: "Exicution",
+        Description:"The process of carrying out a plan, order, or course of action.",
     },
     {
         Logo: Logo4,
-        heading: "Leadership",
-        Description:"Fully committed to the success company",
+        heading: "Coding Expert",
+        Description:"A person who is highly skilled in programming and software development.",
     },
 ];
 

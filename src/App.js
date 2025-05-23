@@ -30,6 +30,8 @@ import VideoDetails from "./components/core/ViewCourse/VideoDetails";
 import Instructor from "./components/core/Dashboard/Instructor";
 import { getUserDetails } from "./services/operations/profileAPI";
 import { useEffect } from "react";
+import InterviewDash from "./pages/InterviewDash";
+import GenerateInterview from "./components/core/Interview/GenrateInterview";
 
 function App() {
   const dispatch = useDispatch()
@@ -147,6 +149,11 @@ function App() {
             </>
           )}
         </Route>
+
+        {/* AI Interview pages for logged In Users */}
+        <Route path="/InterviewDash" element={<InterviewDash />} />
+        <Route path="/GenerateInterview" element={<GenerateInterview />} />
+
 
         {/* 404 Page */}
         <Route path="*" element={<Error />} />
