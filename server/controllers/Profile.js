@@ -63,7 +63,7 @@ exports.deleteAccount = async (req, res) => {
 		// 	console.log("The answer to life, the universe, and everything!");
 		// });
 		// console.log(job);
-		console.log("Printing ID: ", req.user.id);
+	//changed to comment	console.log("Printing ID: ", req.user.id);
 		const id = req.user.id;
 		
 		const user = await User.findById({ _id: id });
@@ -96,7 +96,7 @@ exports.getAllUserDetails = async (req, res) => {
 		const userDetails = await User.findById(id)
 			.populate("additionalDetails")
 			.exec();
-		console.log(userDetails);
+	//changed to comment	console.log(userDetails);
 		res.status(200).json({
 			success: true,
 			message: "User Data fetched successfully",
@@ -120,7 +120,7 @@ exports.updateDisplayPicture = async (req, res) => {
         1000,
         1000
       )
-      console.log(image)
+    //changed to comment  console.log(image)
       const updatedProfile = await User.findByIdAndUpdate(
         { _id: userId },
         { image: image.secure_url },

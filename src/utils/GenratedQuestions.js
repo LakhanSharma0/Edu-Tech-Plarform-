@@ -9,7 +9,6 @@ export const  GenratedQuestions = async (type="technical",
    amount = "1") =>{
     let result = [];
   
-    console.log("API Key", process.env.REACT_APP_GEMINI_API_KEY);
   try {
 
     const response = await ai.models.generateContent({
@@ -30,7 +29,7 @@ export const  GenratedQuestions = async (type="technical",
     `,
   });
 
-  console.log(response.text);
+//changed to comment  console.log(response.text);
   result = response.text;
 }
 catch (error) {
